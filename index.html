@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <!-- Js -->
+    <script src="script.js" defer></script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Favicon Image -->
+    <link
+      rel="icon"
+      href="assets/images/icons8-film-tape-32.png"
+      type="image/x-icon"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "poppins";
+      }
+      :root {
+        --dark: #004554;
+        --light: #2893aa;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black">
+    <nav class="bg-[#000e11] flex items-center justify-around py-5">
+      <h1 class="text-white cursor-default text-lg">Movie App</h1>
+      <div
+        class="flex items-center pl-3 gap-2 overflow-hidden border-2 border-solid border-[var(--light)] w-2/5 h-10 rounded-full opacity-80"
+      >
+        <i class="fa-solid fa-magnifying-glass text-[var(--light)] text-sm"></i>
+        <input
+          type="text"
+          placeholder="search for a movie"
+          id="input"
+          onkeydown="searchMovie()"
+          class="bg-transparent outline-0 w-[90%] placeholder:text-[var(--light)] text-[var(--light)] text-sm"
+        />
+      </div>
+      <img
+        src="assets/images/account-icon.png"
+        alt="account"
+        title="account"
+        class="w-10 cursor-pointer"
+      />
+    </nav>
+    <div class="px-6 py-3">
+      <h1 id="result-found" class="text-[var(--light)]">
+        Redults found : <span></span>
+      </h1>
+    </div>
+    <section class="flex flex-col items-center">
+      <main class="flex flex-wrap justify-center gap-4">
+        <!--  -->
+      </main>
+      <button
+        onclick="seeMore()"
+        class="mt-10 bg-[var(--light)] outline-0 text-white text-sm w-36 h-11 rounded flex items-center justify-evenly hover:bg-transparent hover:text-[var(--light)] border-2 border-solid hover:border-[var(--light)] border-transparent transition-all"
+      >
+        See more
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </section>
+  </body>
+</html>
